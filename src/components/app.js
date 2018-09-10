@@ -3,12 +3,14 @@ import { hot } from 'react-hot-loader';
 
 // Components
 import SearchBox from './searchBox';
+import Results from './results';
 class App extends Component {
   render() {
     return (
       <div>
         iPhatty React
         <SearchBox />
+        <Results />
       </div>
     );
   }
