@@ -9,16 +9,21 @@ class SearchBox extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const search = this.state.searchTerm;
-    if (search.trim().length === 0) {
+    const { searchTerm } = this.state;
+    if (searchTerm.trim().length === 0) {
       this.setState({
         error: true
       });
       return null;
     }
-    this.setState({
-      error: false
-    });
+    this.setState(
+      {
+        error: false
+      },
+      () => {
+        this.props.getData(searchTerm);
+      }
+    );
   };
 
   handleChange = (e, { name, value }) => {
@@ -27,6 +32,7 @@ class SearchBox extends Component {
       error: false
     });
   };
+
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
