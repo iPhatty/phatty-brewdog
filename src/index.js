@@ -2,7 +2,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // Css
-import './style/style.css';
 import '../semantic/dist/semantic.min.css';
 // React components
 import App from './components/app';
