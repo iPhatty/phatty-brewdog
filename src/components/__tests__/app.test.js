@@ -3,6 +3,7 @@ import { mount } from 'enzyme';
 
 import App from '../app';
 import SearchBox from '../searchBox';
+import Results from '../results';
 
 let wrapped;
 beforeEach(() => {
@@ -20,4 +21,8 @@ it('renders an app component', () => {
 
 it('renders a searchbox component', () => {
   expect(wrapped.find(SearchBox).length).toEqual(1);
+});
+
+it('renders a results component', () => {
+  expect(wrapped.find(Results).length).toEqual(1);
 });

@@ -3,7 +3,6 @@ import { hot } from 'react-hot-loader';
 
 // Components
 import SearchBox from './searchBox';
-
 class App extends Component {
   state = {
     data: null
@@ -21,7 +20,7 @@ class App extends Component {
         }
         // Examine the text in the response
         response.json().then(data => {
-          this.setState({ data }, () => console.log(this.state));
+          this.setState({ data });
         });
       })
       .catch(function(err) {
