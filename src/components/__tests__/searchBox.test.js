@@ -2,7 +2,6 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import SearchBox from '../searchBox';
-import { Input } from 'semantic-ui-react';
 
 let wrapped;
 beforeEach(() => {
@@ -14,5 +13,5 @@ it('renders a form', () => {
 });
 
 it('renders a semantic-ui input', () => {
-  expect(wrapped.find(Input).length).toEqual(1);
+  expect(wrapped.find('input').length).toEqual(1);
 });
