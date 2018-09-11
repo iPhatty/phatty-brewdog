@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card } from 'semantic-ui-react';
 
 import BeerCard from './card';
 
@@ -16,11 +15,7 @@ const Results = props => {
       />
     );
   });
-  return (
-    <Card.Group centered stackable>
-      {cards}
-    </Card.Group>
-  );
+  return <div>{cards}</div>;
 };
 
 export default Results;

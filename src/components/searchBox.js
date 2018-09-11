@@ -1,50 +1,37 @@
 import React, { Component } from 'react';
-import { Input } from 'semantic-ui-react';
 
 class SearchBox extends Component {
   state = {
-    searchTerm: '',
-    error: false
+    searchTerm: ''
   };
 
   handleSubmit = e => {
     e.preventDefault();
     const { searchTerm } = this.state;
     if (searchTerm.trim().length === 0) {
-      this.setState({
-        error: true
-      });
       return null;
     }
-    this.setState(
-      {
-        error: false
-      },
-      () => {
-        this.props.getData(searchTerm);
-      }
-    );
+    this.props.getData(searchTerm);
   };
 
-  handleChange = (e, { name, value }) => {
+  handleChange = e => {
+    const { name, value } = e.target;
     this.setState({
-      [name]: value,
-      error: false
+      [name]: value
     });
   };
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <Input
-          error={this.state.error}
-          action={{ icon: 'search' }}
+        <input
           placeholder="Search..."
           value={this.state.searchTerm}
           onChange={this.handleChange}
           name="searchTerm"
           required
         />
+        <button type="submit">Submit</button>
       </form>
     );
   }
