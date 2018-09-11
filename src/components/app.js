@@ -6,7 +6,7 @@ import SearchBox from './searchBox';
 import Results from './results';
 class App extends Component {
   state = {
-    data: null
+    data: []
   };
 
   getData = searchTerm => {
@@ -21,7 +21,7 @@ class App extends Component {
         }
         // Examine the text in the response
         response.json().then(data => {
-          this.setState({ data });
+          this.setState({ data }, () => console.log('data updated: ', data));
         });
       })
       .catch(function(err) {
@@ -34,7 +34,7 @@ class App extends Component {
       <div>
         iPhatty React
         <SearchBox getData={this.getData} />
-        <Results />
+        <Results beers={this.state.data} />
       </div>
     );
   }
