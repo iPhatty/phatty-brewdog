@@ -15,7 +15,7 @@ const Results = props => {
       />
     );
   });
-  return <div>{cards}</div>;
+  return <ul className="list">{cards}</ul>;
 };
 
 export default Results;

@@ -6,7 +6,7 @@ const BeerCard = props => {
   });
 
   return (
-    <ul>
+    <li className="list--item">
       <img src={props.image_url} />
       <h2>{props.name}</h2>
       <p>
@@ -15,7 +15,7 @@ const BeerCard = props => {
       <p>{props.description}</p>
       <p>Goes well with:</p>
       <ul>{foodPairing}</ul>
-    </ul>
+    </li>
   );
 };
 

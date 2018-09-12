@@ -1,0 +1,20 @@
+.list {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+
+  &--item {
+    margin-left: 4%;
+    margin-bottom: 4%;
+    list-style: none;
+    flex: 0 0 92%;
+
+    @include tablet {
+      flex: 0 0 44%;
+    }
+
+    @include desktop {
+      flex: 0 0 20%;
+    }
+  }
+}

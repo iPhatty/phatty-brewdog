@@ -25,3 +25,19 @@ body {
     border-style: none;
     border-radius: 5px;
     padding: 0.5rem; }
+
+.list {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0; }
+  .list--item {
+    margin-left: 4%;
+    margin-bottom: 4%;
+    list-style: none;
+    flex: 0 0 92%; }
+    @media screen and (min-width: 550px) and (max-width: 849px) {
+      .list--item {
+        flex: 0 0 44%; } }
+    @media screen and (min-width: 850px) {
+      .list--item {
+        flex: 0 0 20%; } }
