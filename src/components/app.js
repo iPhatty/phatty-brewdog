@@ -31,7 +31,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="wrapper">
         iPhatty React
         <SearchBox getData={this.getData} />
         <Results beers={this.state.data} />
