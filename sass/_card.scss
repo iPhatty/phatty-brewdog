@@ -1,0 +1,9 @@
+.card {
+  border-bottom: 4px solid $primary;
+  box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+  height: 100%;
+  padding: 2%;
+  &--img {
+    height: 150px;
+  }
+}

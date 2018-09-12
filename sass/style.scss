@@ -5,9 +5,10 @@ html {
 }
 
 body {
-  background-color: $white;
+  background: $gradient;
 }
 
 @import '_app';
 @import '_searchBox';
 @import '_results';
+@import '_card';

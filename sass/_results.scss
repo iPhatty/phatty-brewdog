@@ -4,17 +4,17 @@
   padding: 0;
 
   &--item {
-    margin-left: 4%;
+    margin-left: 2%;
     margin-bottom: 4%;
     list-style: none;
-    flex: 0 0 92%;
+    flex: 0 0 96%;
 
     @include tablet {
-      flex: 0 0 44%;
+      flex: 0 0 47%;
     }
 
     @include desktop {
-      flex: 0 0 20%;
+      flex: 0 0 22.5%;
     }
   }
 }
