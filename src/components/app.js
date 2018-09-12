@@ -31,10 +31,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        iPhatty React
-        <SearchBox getData={this.getData} />
-        <Results beers={this.state.data} />
+      <div className="wrapper">
+        <div className="row">
+          <SearchBox getData={this.getData} />
+        </div>
+        <div className="row">
+          <Results beers={this.state.data} />
+        </div>
       </div>
     );
   }

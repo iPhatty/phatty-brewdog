@@ -1,0 +1,14 @@
+@import '_variables';
+
+html {
+  font-family: $font-family;
+}
+
+body {
+  background: $gradient;
+}
+
+@import '_app';
+@import '_searchBox';
+@import '_results';
+@import '_card';
