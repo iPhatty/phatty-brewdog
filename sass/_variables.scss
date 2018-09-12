@@ -1,7 +1,21 @@
-/*
-Colours
-*/
 $primary: #b10f2e;
 $secondary: #570000;
 $white: #fdffff;
 $black: #1d1d1d;
+
+$gradient: linear-gradient(to right, $primary, $secondary);
+
+$tablet: 550px;
+$desktop: 850px;
+
+@mixin tablet {
+  @media screen and (min-width: #{$tablet}) and (max-width: #{$desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$desktop}) {
+    @content;
+  }
+}
