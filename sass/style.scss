@@ -1,7 +1,12 @@
 @import '_variables';
 
+html {
+  font-family: $font-family;
+}
+
 body {
   background-color: $white;
 }
 
 @import '_app';
+@import '_searchBox';
