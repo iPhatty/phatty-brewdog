@@ -2,7 +2,7 @@
   box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
   height: 20vh;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 
@@ -18,5 +18,9 @@
     border-style: none;
     border-radius: 5px;
     padding: 0.5rem;
+  }
+
+  & .input--wrapper {
+    margin-top: 1rem;
   }
 }

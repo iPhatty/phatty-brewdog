@@ -24,7 +24,7 @@
   transform: translateY(50px);
   opacity: 0;
   &.active {
-    transition: opacity 1s linear, transform 1s linear;
+    transition: opacity 0.5s linear, transform 0.5s linear;
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;

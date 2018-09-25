@@ -24,17 +24,23 @@ class SearchBox extends Component {
   render() {
     return (
       <form className="form" onSubmit={this.handleSubmit}>
-        <input
-          className="form--input"
-          placeholder="Search here..."
-          value={this.state.searchTerm}
-          onChange={this.handleChange}
-          name="searchTerm"
-          required
-        />
-        <button className="form--button" type="submit">
-          Submit
-        </button>
+        <label htmlFor="foodSearch">
+          <h1>Type in a food to find a beer to match!</h1>
+        </label>
+        <div className="input--wrapper">
+          <input
+            id="foodSearch"
+            className="form--input"
+            placeholder="Search here..."
+            value={this.state.searchTerm}
+            onChange={this.handleChange}
+            name="searchTerm"
+            required
+          />
+          <button className="form--button" type="submit">
+            Submit
+          </button>
+        </div>
       </form>
     );
   }
